@@ -1,16 +1,4 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title> Start 1</title> 
-    </head>
-    <body>
-        <h1> Yes, let's go, human!
-            </h1></html>
-
-        
-    <pre>  <small>
-              
-                            \\          
+                           \\          
                          ─\\\          
                 \\\\\\   \\            
              ────────\\──\─────▄▄      
@@ -25,6 +13,3 @@
  ──▒▒            ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄  
  ─────────    \■■  ■■           ■    \\
  ▒▒ ────      \\■■■              ■■■■\\
- 
-</small> <a href="2.html"> GO</a>
-    </pre></html></body>
