@@ -1,9 +1,3 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title> Path 1: Megaphone Man; Talk</title> 
-    </head>
-    <body><pre>
                                                                .                                    
                                           |||                                                    || 
                                           ||||                                                  ||| 
@@ -33,16 +27,4 @@
                                                                     ////////▐▐▐▐▐▐▐▐//ⁿ             
                                                                     ██████████████████              
                                                                     ██████████████████              
-                                                                    ███████████████████                     
-    </pre>
-    <h1> Megaphone Man: <i>"WHAT! WHAT DO YOU WANT!"</i> </h1>
-<br>
-<a href="3path-megaphone2.html"> Chill out dude!</a>
-</br>
-
-<br> 
-<a href="./3path1">Um, nevermind..  </a>
-</br>
-        
-
-            
+                                                                    ███████████████████             
