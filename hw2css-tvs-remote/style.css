@@ -1,10 +1,6 @@
-.special{
-    display:inline-block;
-    height:auto;
-    background-color: #f4feff;
-    font-size:2rem;
-    }
-
 body{
     background-color: beige;
+}
+h1{
+    background-color: aqua;
 }
