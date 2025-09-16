@@ -1,4 +1,6 @@
 body{
     background-color: rgb(245, 249, 255);
 }
-
+.my-element{
+    text-align: center;
+}
