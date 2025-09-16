@@ -1,6 +1,6 @@
 body{
     background-color: rgb(245, 249, 255);
 }
-.my-element{
-    text-align: center;
+pre{
+    text-align:center;font-size 1vw;
 }
