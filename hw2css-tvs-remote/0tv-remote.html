@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html> 
     <head><title> Titlescreen </title> </head>
-    <pre> <p style="color: rgb(50, 57, 88);"> 
+    <pre>  <pre style="color: rgb(68, 80, 127);">
 ▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐
 ▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐
 ▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐
@@ -34,7 +34,32 @@
 ▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐
 
 
+
+
+<audio id="myAudio">
+  <source src="titlescreen.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<p onclick="togglePlayPause()"> PLAY/PAUSE MUSIC </p>
+
+<script>
+  var myAudio = document.getElementById("myAudio"); 
+
+  function togglePlayPause() {
+    if (myAudio.paused) {
+      myAudio.play();
+    } else {
+      myAudio.pause();
+    }
+  }
+</script>
+
+</body>
+</html>
+
 </pre>
 </p>
  <link rel="stylesheet" href="style.css">
+
 

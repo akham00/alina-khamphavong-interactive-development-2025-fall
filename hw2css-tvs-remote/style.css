@@ -4,3 +4,11 @@ body{
 pre{
     text-align:center;font-size 1vw;
 }
+
+    p {
+        color: rgb(80, 80, 116); /* Changes the text color of all paragraph elements */
+    }
+
+    h1 {
+        color: rgb(58, 67, 116); /* Changes the text color of all h1 headings */
+    }
