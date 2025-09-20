@@ -1,5 +1,6 @@
 body{
     background-color: rgb(0, 0, 0);
+    
 
 }
 @font-face { font-family: bitsonbits; src: url('bit.ttf'); } 
@@ -13,12 +14,15 @@ pre {
     p {
         color: rgb(255, 255, 255); /* Changes the text color of all paragraph elements */
         text-align: center;
+        
     }
 
     h1 {
         color: rgb(255, 255, 255); /* Changes the text color of all h1 headings */
+        
 
     }
+    
 
     a:link {
   color: rgb(255, 255, 255);
@@ -39,6 +43,21 @@ a:active {
   color: rgb(255, 255, 255);
   background-color: transparent;
   text-decoration: dotted;
+
 }
+span.vertical-shake {
+  animation: vertical-shaking 0.35s infinite;
+
+
+div {
+  background-color: lightgrey;
+  width: 300px;
+  border: 15px solid green;
+  padding: 50px;
+  margin: 20px;
+}
+
+
+
 
 
