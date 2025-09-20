@@ -19,4 +19,26 @@ pre {
         color: rgb(255, 255, 255); /* Changes the text color of all h1 headings */
 
     }
-   
+
+    a:link {
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: rgb(109, 16, 16);
+  background-color: transparent;
+  text-decoration: dotted;
+}
+a:active {
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+  text-decoration: dotted;
+}
+
+
