@@ -1,21 +1,22 @@
 body{
-    background-color: rgb(245, 249, 255);
+    background-color: rgb(0, 0, 0);
 
 }
 @font-face { font-family: bitsonbits; src: url('bit.ttf'); } 
 .bit { font-family: bitsonbits; font-size: 4.2em; 
 }
 
-pre{
+pre {
     text-align:center;font-size 1vw;
     
 }
     p {
-        color: rgb(80, 80, 116); /* Changes the text color of all paragraph elements */
+        color: rgb(255, 255, 255); /* Changes the text color of all paragraph elements */
+        text-align: center;
     }
 
     h1 {
-        color: rgb(58, 67, 116); /* Changes the text color of all h1 headings */
+        color: rgb(255, 255, 255); /* Changes the text color of all h1 headings */
 
     }
    
