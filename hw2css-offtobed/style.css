@@ -1,0 +1,49 @@
+body{
+    background-color: rgb(0, 0, 0);
+    
+
+}
+@font-face { font-family: bitsonbits; src: url('bit.ttf'); } 
+.bit { font-family: bitsonbits; font-size: 4.2em; 
+}
+
+pre {
+    text-align:center;font-size 1vw;
+    
+}
+    p {
+        color: rgb(255, 255, 255); /* Changes the text color of all paragraph elements */
+        text-align: center;
+        
+    }
+
+    h1 {
+        color: rgb(255, 255, 255); /* Changes the text color of all h1 headings */
+
+
+    }
+
+    h3{
+      text-align: right;
+    }
+    
+
+    a:link {
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: rgb(109, 16, 16);
+  background-color: transparent;
+  text-decoration: dotted;
+}
+a:active {
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+  text-decoration: dotted;

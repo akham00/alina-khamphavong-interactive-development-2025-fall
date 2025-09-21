@@ -1,0 +1,22 @@
+h1 {
+  font-size: 66px; /* set the font size of the header to 18 pixels */
+  height: 1em; /* set the height of the header to 3 times the font size */
+}
+
+h2 {
+  font-size: 50px; /* set the font size of the header to 18 pixels */
+  height: 1em; /* set the height of the header to 3 times the font size */
+}
+
+body  {
+    text-align: center;
+  text-shadow: 2px 2px hsl(41, 60%, 78%);
+  background-image: url("test.jpg");
+  background-color: #cccccc;
+  background-size: 400x;
+
+}
+
+
+
+
