@@ -1,21 +1,40 @@
-h1 {
-  font-size: 66px; /* set the font size of the header to 18 pixels */
-  height: 1em; /* set the height of the header to 3 times the font size */
+h1 { font-family: Helvetica, sans-serif;
+  font-size: 60px; /* set the font size of the header to 18 pixels */
+  height: 4em; /* set the height of the header to 3 times the font size */
+    text-shadow: 1px 1px hsl(40, 100%, 91%);
+    
 }
 
-h2 {
+h2 { font-family: Helvetica, sans-serif;
+    text-shadow: 1px 1px hsl(40, 100%, 91%);
   font-size: 50px; /* set the font size of the header to 18 pixels */
   height: 1em; /* set the height of the header to 3 times the font size */
 }
 
-body  {
-    text-align: center;
-  text-shadow: 2px 2px hsl(41, 60%, 78%);
-  background-image: url("test.jpg");
-  background-color: #cccccc;
-  background-size: 400x;
-
+body  { font-family: Helvetica, sans-serif;
+    text-align: left;
+    font-size: large;
+  margin: 60px; /* Remove default body margin */
+  height: 60vh; /* Ensure body takes full viewport height */
+    background-image: url('wallpaper.png');
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
+
+a {
+  color: rgb(254, 248, 211); /* Sets the default color for all links */
+  text-decoration: none; /* Removes the default underline */
+}
+
+
+/* Styling for links on hover */
+a:hover {
+  color: #ce3b0a; /* Red */
+  text-decoration: underline; /* Adds an underline on hover */
+}
+
 
 
 
