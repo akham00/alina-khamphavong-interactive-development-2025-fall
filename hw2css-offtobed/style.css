@@ -82,7 +82,7 @@ a:visited {
   text-decoration: none;
 }
 a:hover {
-  color: rgb(109, 16, 16);
+  color: rgb(107, 107, 107);
   background-color: transparent;
   text-decoration: dotted;
   border-color: black;
