@@ -9,6 +9,47 @@ body{
 
 pre {
     text-align:center;font-size 1vw;
+
+    
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.centered-top {
+  position: absolute;
+  top: 14%;
+  right: 36%;
+  left: 50%;
+  transform: translate(-80%, -12%);
+}
+
+.middle-left {
+  position: absolute;
+  top: 400px;
+  left: -30px;
+}
+
+.middle-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-80%, -50%);
+}
+
     
 }
     p {
@@ -19,6 +60,7 @@ pre {
 
     h1 {
         color: rgb(255, 255, 255); /* Changes the text color of all h1 headings */
+        
 
 
     }
@@ -32,7 +74,8 @@ pre {
   color: rgb(255, 255, 255);
   background-color: transparent;
   text-decoration: none;
-}
+  
+  }
 a:visited {
   color: rgb(255, 255, 255);
   background-color: transparent;
@@ -42,8 +85,14 @@ a:hover {
   color: rgb(109, 16, 16);
   background-color: transparent;
   text-decoration: dotted;
+  border-color: black;
+
+
 }
 a:active {
   color: rgb(255, 255, 255);
   background-color: transparent;
   text-decoration: dotted;
+
+}
+  
