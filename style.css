@@ -35,7 +35,22 @@ a:hover {
   text-decoration: underline; /* Adds an underline on hover */
 }
 
+img {
+  transition: transform .7s ease-in-out;
+}
+img:hover {
+  transform: rotate(360deg);
+    animation: rotate-loop 1s linear infinite; /* Shorthand */
+}
 
+ @keyframes rotate-loop {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
 
 
 
