@@ -16,7 +16,7 @@ body  { font-family: Helvetica, sans-serif;
     font-size: large;
   margin: 60px; /* Remove default body margin */
   height: 60vh; /* Ensure body takes full viewport height */
-    background-image: url('wallpaper.png');
+  background-image: url('wallpaper.png');
   background-size: cover;
   background-position: right;
   background-repeat: no-repeat;
