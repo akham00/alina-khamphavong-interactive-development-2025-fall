@@ -93,11 +93,7 @@ a:visited {
 }
 a:hover {
   color: rgb(141, 141, 141);
-            background-image: url('imagesforotb/blood.png');            
-            background-size: cover;
-            background-position: center;
-            object-position: absolute;
-            background-repeat: no-repeat;
+
 
 
 
