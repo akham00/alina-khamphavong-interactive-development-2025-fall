@@ -1,0 +1,46 @@
+body {
+  background-color: rgb(255, 254, 253);
+  font-family: 'mainfont'; src: url('yabounte.otf'); 
+
+}
+
+.large-container {
+  width: 55%; /* Example: 90% of the parent's width */
+  max-width: 900px; /* Prevents it from getting too wide on very large screens */
+  height: 1000px; /* Example: Fixed height */
+  margin: 30px auto; /* Centers the container horizontally with top/bottom margin */
+  padding: 30px; /* Space between content and border */
+  background-color: rgb(221, 187, 127); /* Light gray background */
+  box-shadow: 15px 5px 10px rgba(31, 5, 3, 0.2); /* Adds a subtle shadow */
+  border-radius: 20px; /* Slightly rounded corners */
+  box-sizing: border-box; /* Ensures padding and border are included in width/height */
+}
+.title{
+    font-size: 100px;
+    text-align: left;
+    color: rgb(63, 70, 100);
+    margin-left: 1em;
+    
+}
+
+        @font-face {
+        font-family: 'mainfont';
+        src: url(yabounte.otf);
+    }
+
+.menu-group{
+    text-wrap: auto;
+    font-size: 30px;
+    text-align: left;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    color: rgb(51, 10, 6);
+
+    width: 80%; /* Example: 90% of the parent's width */
+    max-width: 100px; /* Prevents it from getting too wide on very large screens */
+    height: 50px; /* Example: Fixed height */
+    margin: 30px auto; /* Centers the container horizontally with top/bottom margin */
+    padding: 5px; /* Space between content and border */
+    border: dotted 4px;
+    border-radius: 6px; /* Slightly rounded corners */
+    box-sizing: border-box; /* Ensures padding and border are included in width/height */
+}
