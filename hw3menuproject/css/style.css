@@ -1,42 +1,99 @@
-body {
-  background-color: rgb(255, 255, 255);
-  font-family: 'mainfont'; src: url('danfo.ttf'); 
 
-}
+        body {
 
-.large-container {
-  background-image: url("texture.jpg");
-  width: 50%; /* Example: 90% of the parent's width */
-  max-width: 900px; /* Prevents it from getting too wide on very large screens */
-  height: 1000px; /* Example: Fixed height */
-  margin: 30px auto; /* Centers the container horizontally with top/bottom margin */
-  padding: 20px; /* Space between content and border */
-  background-color: rgba(228, 226, 214, 0.967); /* Light gray background */
-  box-shadow: 15px;
-  border-radius: 20px; /* Slightly rounded corners */
-  box-sizing: border-box; /* Ensures padding and border are included in width/height */
-}
-.title{
-    font-size: 100px;
-    text-align: center;
-    color: rgb(205, 62, 23);
-    
-}
+            margin: 0;
+            font-family: mon,'Arial Narrow Bold', sans-serif;
+             text-align: left;
+            
+        }
 
-        @font-face {
-        font-family: 'mainfont';
-        src: url(danfo.ttf);
+
+
+        .menu-container {
+            max-width: 800px; /* Adjust as needed */
+            margin: 20px auto; /* Centers the div horizontally with top/bottom margin */
+            padding: 20px;
+            background-color: #fffff3;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            border:  double 6px  rgb(131, 19, 19); 
+            text-align: center; /* Centers inline content within the div */
+        }
+
+        
+        h1 {
+            font-family: danfo,'Arial Narrow Bold', sans-serif;
+            margin-bottom: 50px;
+            font-size: 55px;
+            text-align: center;
+            color: rgb(205, 62, 23);
+
+                    
+        }
+        .menu-section {
+            margin-bottom: 30px;
+            
+        }
+        h2 {
+            font-family: mon,'Arial Narrow Bold', sans-serif;
+            color: rgb(205, 62, 23);
+            border-bottom: 2px solid  rgb(228, 109, 76);
+            padding: 4px;
+            border-radius: 45px;
+            max-height: 300px;
+            width: 300px;
+            position: relative;
+            padding-bottom: 10px;
+            text-align: center;
+
+        }
+        .menu-item {
+            display: flex;
+            color: rgb(205, 62, 23);
+            justify-content: space-between;
+            margin-bottom: 10px;
+            padding: 2% 0;
+            text-align: left;
+        }
+        .item-name {
+            font-weight: bold;
+            color: rgb(205, 62, 23);
+             text-align: left;
+        }
+        .item-description {
+            font-size: 0.9em;
+            color: #777;
+            text-align: left;
+            flex-grow: 1; /* Allows description to take available space */
+            margin-left: 10px; /* Space between name and description */
+        }
+        .item-price {
+            font-weight: bold;
+            color: rgb(205, 62, 23);
+            white-space: nowrap; /* Prevents price from wrapping */
+            
+        }
+
+        img {
+      margin-bottom: 10%;
+      width: 40%;
+      border-radius: 20%;
+         transform: rotate(-40deg); /* Rotates the element 45 degrees clockwise */
+        }
+         @keyframes bounce {
+  0%, 100% {
+    transform: translateY(0); /* Start and end at original position */
+  }
+  50% {
+    transform: translateY(-10px); /* Move upwards */
+        }
     }
-
-.menu-group{
-    font-size: 20px;
-    position: absolute;
-    font-family: 'mon', Helvetica, sans-serif;
-    color: rgb(199, 50, 9);
-    border: solid 0.9px;
+        img:hover {
+  animation: bounce 0.6s ease-in-out forwards;
 }
-
-        @font-face {
-        font-family: 'mon';
-        src: url(montagu.ttf);
-    }
+.horizontal-line {
+  width: 50%; 
+  height: 0; 
+  border-bottom: 2px dashed  rgb(205, 62, 23);
+  margin-top: 90% 5;
+}
