@@ -71,8 +71,8 @@
         }
 
         img {
-      margin-bottom: 8%;
-      max-width: 40%;
+      margin-bottom: 10%;
+      width: 40%;
       border-radius: 20%;
          transform: rotate(-40deg); /* Rotates the element 45 degrees clockwise */
         }
