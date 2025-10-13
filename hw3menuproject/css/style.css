@@ -5,6 +5,7 @@ body {
 }
 
 .large-container {
+  background-image: url("texture.jpg");
   width: 50%; /* Example: 90% of the parent's width */
   max-width: 900px; /* Prevents it from getting too wide on very large screens */
   height: 1000px; /* Example: Fixed height */
