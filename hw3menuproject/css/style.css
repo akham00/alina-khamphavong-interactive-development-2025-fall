@@ -4,7 +4,11 @@
             margin: 0;
             font-family: mon,'Arial Narrow Bold', sans-serif;
              text-align: left;
+            
         }
+
+
+
         .menu-container {
             max-width: 800px; /* Adjust as needed */
             margin: 20px auto; /* Centers the div horizontally with top/bottom margin */
