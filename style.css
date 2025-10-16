@@ -14,11 +14,12 @@ h2 { font-family: Helvetica, sans-serif;
 body  { font-family: Helvetica, sans-serif;
     text-align: left;
     font-size: large;
-  margin: 60px; /* Remove default body margin */
-  height: 60vh; /* Ensure body takes full viewport height */
+  margin: 90px; /* Remove default body margin */
+  width: 30vh;
+  height: 30vh; /* Ensure body takes full viewport height */
   background-image: url('wallpaper.png');
   background-size: cover;
-  background-position: right;
+  background-position: right right;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
