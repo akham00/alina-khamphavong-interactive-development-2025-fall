@@ -3,6 +3,8 @@ html {
 	display: flex;
         cursor: crosshair;
                 animation: fadeIn 2s ease-in-out forwards;
+                   background-image: radial-gradient(circle at center, yellow, green);
+
 }
 
 @keyframes fadeIn {
@@ -41,48 +43,47 @@ html {
 
 
 body {
+
 	position: relative;
 	margin: auto;
-	background: white;
-	perspective: 500px;
+	perspective: 24em;
+
 }
 
 
 main {
-
-    border: solid #373737;
+    border: solid #000000;
    border-width: 1em;
    border-bottom: 0.10em;
    border-top: 1em;
    border-radius: 2em;
 	display: flex;
+    color:rgb(253, 253, 253);
 	flex-direction: column;
 	transform: rotatex(20deg);
     transform: rotatey(-20deg);
 }
 
 button {
+    background-color: radial-gradient(circle at center, yellow, green);
 	display: block;
 	position:relative;
 	margin: 0.5em 0;
 	padding: .8em 2.2em;
 	cursor: help;
-
-	background: #FFFFFF;
-	border: solid black;
 	border-radius: .9em;
-
 	font-size: 1.0em;
 	font-weight: 500;
 	letter-spacing: 0.04em;
 
-	mix-blend-mode: color-dodge;
-	perspective: 500px;
+	mix-blend-mode:color-dodge;
+	perspective: 5em;
 	transform-style: preserve-3d;
 
     
 
 	&:before, &:after {
+
 		--z: 0px;
 		position: absolute;
 		top: 0;
@@ -108,15 +109,15 @@ button {
 	}
 	
 	&:after {
-		background-color: #00ece8;
+		background-color: #6eec00;
 	}
 	
 	&:before {
-		background-color: #ffd51c;
+		background-color: #00fd37;
 	}
 	
 	&:hover {
-		background-color: #FFF65B;
+		background-color: white;
 		transition: background .3s 0.1s;
 	}
 	
