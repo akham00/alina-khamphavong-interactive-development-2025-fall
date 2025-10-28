@@ -52,11 +52,7 @@ body {
 
 
 main {
-    border: solid #000000;
-   border-width: 1em;
-   border-bottom: 0.10em;
-   border-top: 1em;
-   border-radius: 2em;
+
 	display: flex;
     color:rgb(253, 253, 253);
 	flex-direction: column;
