@@ -65,7 +65,7 @@ main {
 }
 
 button {
-    background-color: radial-gradient(circle at center, yellow, green);
+    background-color: rgba(255, 255, 255, 0.486);
 	display: block;
 	position:relative;
 	margin: 0.5em 0;
@@ -109,11 +109,11 @@ button {
 	}
 	
 	&:after {
-		background-color: #6eec00;
+		background-color: #7eff0ce4;
 	}
 	
 	&:before {
-		background-color: #00fd37;
+		background-color: #7cba26;
 	}
 	
 	&:hover {
