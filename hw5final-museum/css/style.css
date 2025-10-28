@@ -3,7 +3,7 @@ html {
 	display: flex;
         cursor: crosshair;
                 animation: fadeIn 2s ease-in-out forwards;
-                   background-image: radial-gradient(circle at center, yellow, green);
+                   background-image: radial-gradient(circle at center, yellow, rgb(23, 248, 23), green);
 
 }
 
