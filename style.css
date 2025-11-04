@@ -19,7 +19,7 @@
 body{
     background-color: rgb(251, 252, 255);
     color: #2a2635;
-    background-image: url(img/grass.jpg);
+    background-image: url(https://i.pinimg.com/1200x/a2/e7/74/a2e7741e11cb810cfa946223acbc3856.jpg);
     background-size:  cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -34,7 +34,7 @@ p {
  color: #2a2635;
   }
   a:hover{
-     color: #9787b3;
+     color: #ffffff;
 
   }
   
@@ -77,7 +77,7 @@ ul li{
 
 nav ul a:hover{
     font-size:105%;
-    color: #9787b3;
+    color: #ffae00;
 }
 
 nav ul a:active, a:active{
@@ -109,7 +109,7 @@ nav ul a:active, a:active{
   
   .navbar .nav-container a:hover{
       font-weight: bolder;
-          color: #9787b3;
+         color: #71e009;
   }
   
   .nav-container {
