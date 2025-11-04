@@ -1,6 +1,7 @@
    
    
    html{
+        cursor: url('img/duckie.png'), auto;
     min-width: 100vw;
     min-height: 100vh;
     overflow-x:hidden;
@@ -42,10 +43,9 @@ p {
 
 .title{
     font-family: 'Segoe UI', Tahoma;
-    margin: 0;
+    margin: 1;
     font-size: 200%;
     font-weight:bold;
-    margin-bottom: 1em;
     text-decoration: none;
     color: #1b1a1b;
 
@@ -57,7 +57,7 @@ nav {
     font-size: 2.5em;
     position: fixed;
     top: 5%;
-    left: 7.5%;
+    left: 8%;
     transition: all 0.5s ease-in-out;
     z-index: 3;
     width: fit-content;
@@ -355,4 +355,4 @@ img.no-boxShadow, #websitebutton{
   }
   
   
-}}
+}
