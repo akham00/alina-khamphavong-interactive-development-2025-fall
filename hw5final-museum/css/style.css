@@ -1,0 +1,192 @@
+html { 
+	height: 60%;
+	display: flex;
+        cursor: crosshair;
+                animation: fadeIn 2s ease-in-out forwards;
+                   background-image: radial-gradient(circle at center, yellow, rgb(23, 248, 23), rgb(0, 194, 0), rgb(12, 66, 12));
+
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    
+}
+}
+
+
+
+.intro{
+        color: #044b24; 
+        font-size: 20px;
+        display: block;
+	    position: relative;
+        font-family:  Helvetica, sans-serif;
+        transform: rotatex(20deg);
+    	transform: rotatey(-20deg);
+        padding-top: -9em;
+}
+
+
+
+@font-face {
+  font-family: 'gantari';
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/gantari/v4/jVyI7nvyB2HL8iZyJEceqwQBdc5f9jXp.woff2) format('woff2');
+    }
+
+
+
+body {
+
+	position: relative;
+	margin: auto;
+	perspective: 24em;
+
+}
+
+
+main {
+
+	display: flex;
+    color:rgb(253, 253, 253);
+	flex-direction: column;
+	transform: rotatex(20deg);
+    transform: rotatey(-20deg);
+}
+
+button {
+    background-color: rgba(255, 255, 255, 0.486);
+	display: block;
+	position:relative;
+	margin: 0.5em 0;
+	padding: .8em 2.2em;
+	cursor: help;
+	border-radius: 5em;
+	font-size: 1.0em;
+	font-weight: 500;
+	letter-spacing: 0.04em;
+
+	mix-blend-mode:color-dodge;
+	perspective: 5em;
+	transform-style: preserve-3d;
+
+    
+
+	&:before, &:after {
+
+		--z: 0px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: block;
+		content: '';
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		mix-blend-mode: inherit;
+		border-radius: inherit;
+		transform-style: preserve-3d;
+		transform: translate3d(
+			calc(var(--z) * 0px), 
+			calc(var(--z) * 0px), 
+			calc(var(--z) * 0px)
+		);
+	}
+	
+	span {
+		mix-blend-mode: none;
+		display: block;
+	}
+	
+	&:after {
+		background-color: #7eff0ce4;
+	}
+	
+	&:before {
+		background-color: #7cba26;
+	}
+	
+	&:hover {
+		background-color: white;
+		transition: background .3s 0.1s;
+	}
+	
+	&:hover:before {
+		--z: 0.04;
+		animation: translateWobble 2.2s ease forwards;
+	}
+	
+	&:hover:after {
+		--z: -0.06;
+		animation: translateWobble 2.2s ease forwards;
+	}
+}
+
+@keyframes translateWobble {
+  0% {
+		opacity: 0;
+		transform: translate3d(
+			calc(var(--z) * 0px), 
+			calc(var(--z) * 0px), 
+			calc(var(--z) * 0px)
+		);
+  }
+  16% {
+		transform: translate3d(
+			calc(var(--z) * 160px), 
+			calc(var(--z) * 160px), 
+			calc(var(--z) * 160px)
+		);
+  }
+  28% {
+		opacity: 1;
+		transform: translate3d(
+			calc(var(--z) * 70px), 
+			calc(var(--z) * 70px), 
+			calc(var(--z) * 70px)
+		);
+  }
+  44% {
+		transform: translate3d(
+			calc(var(--z) * 130px), 
+			calc(var(--z) * 130px), 
+			calc(var(--z) * 130px)
+		);
+  }
+  59% {
+		transform: translate3d(
+			calc(var(--z) * 85px), 
+			calc(var(--z) * 85px), 
+			calc(var(--z) * 85px)
+		);
+  }
+  73% {
+		transform: translate3d(
+			calc(var(--z) * 110px), 
+			calc(var(--z) * 110px), 
+			calc(var(--z) * 110px)
+		);
+  }
+	88% {
+		opacity: 1;
+		transform: translate3d(
+			calc(var(--z) * 90px), 
+			calc(var(--z) * 90px), 
+			calc(var(--z) * 90px)
+		);
+  }
+  100% {
+		opacity: 1;
+		transform: translate3d(
+			calc(var(--z) * 100px), 
+			calc(var(--z) * 100px), 
+			calc(var(--z) * 100px)
+		);
+  }
+}
