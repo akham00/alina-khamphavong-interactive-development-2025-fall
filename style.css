@@ -41,10 +41,22 @@ p {
   
 /* nav */
 
+
+.title1{
+    font-family: 'Segoe UI', Tahoma;
+      position: fixed;
+      top: -0.8em;
+      left: 30px;
+    font-size: 150%;
+    font-weight:bold;
+    text-decoration: none;
+    color: #1b1a1b;
+
+}
+
 .title{
     font-family: 'Segoe UI', Tahoma;
-    margin: 1;
-    font-size: 200%;
+    font-size: 150%;
     font-weight:bold;
     text-decoration: none;
     color: #1b1a1b;
@@ -57,7 +69,7 @@ nav {
     font-size: 2.5em;
     position: fixed;
     top: 5%;
-    left: 8%;
+    left: %;
     transition: all 0.5s ease-in-out;
     z-index: 3;
     width: fit-content;
