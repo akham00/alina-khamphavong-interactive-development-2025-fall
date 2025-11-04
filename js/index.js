@@ -1,0 +1,34 @@
+fish.addEventListener("mousedown", onMouseDown);
+fish.addEventListener("mouseup", onMouseUp);
+fish.addEventListener("mouseleave", onMouseUp);
+
+function onMouseDown() {
+    console.log("sadasdadd");
+    fish.classList.add("click");
+    const snd = new Audio("data:audio/mpeg;base64,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");
+    snd.play();
+    heldDown = true;
+}
+
+function onMouseUp() {
+    if (heldDown) {
+        fish.classList.remove("click");
+        const snd = new Audio("data:audio/mpeg;base64,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");
+        snd.play();
+        soundsOn++;
+        counterContainer.classList.add("active");
+        snd.addEventListener("ended", () => {
+            soundsOn--;
+            offWhenOff();
+        }
+        )
+        clicks += 1;
+        counter.innerText = "" + clicks;
+    }
+    heldDown = false;
+}
+
+function offWhenOff() {
+    if (soundsOn <= 0)
+        counterContainer.classList.remove("active");
+}

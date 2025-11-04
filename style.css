@@ -1,24 +1,13 @@
-   
-   
+
    html{
-        cursor: url('img/duckie.png'), auto;
-    min-width: 100vw;
+    min-width: 100vh;
     min-height: 100vh;
     overflow-x:hidden;
   }
- 
- {
-
-		border: 0;
-		font-size: 100%;
-		font: inherit;
-		vertical-align: baseline;
-	}
-
-  
 
 body{
-    background-color: rgb(251, 252, 255);
+      cursor: url("img/duckie.png"), default;
+    background-color: rgb(38, 125, 240);
     color: #2a2635;
     background-image: url(https://i.pinimg.com/1200x/a2/e7/74/a2e7741e11cb810cfa946223acbc3856.jpg);
     background-size:  cover;
@@ -26,9 +15,6 @@ body{
     background-position: center;
 }
 
-p {
-    line-height: 2;
-}
 
   a{
     text-decoration: none;
@@ -42,11 +28,10 @@ p {
 /* nav */
 
 
-.title1{
+
+.title{
     font-family: 'Segoe UI', Tahoma;
-      position: fixed;
-      top: -0.8em;
-      left: 30px;
+    margin-left: 10%;
     font-size: 150%;
     font-weight:bold;
     text-decoration: none;
@@ -54,23 +39,17 @@ p {
 
 }
 
-.title{
-    font-family: 'Segoe UI', Tahoma;
-    font-size: 150%;
-    font-weight:bold;
-    text-decoration: none;
-    color: #1b1a1b;
+.menuLink{
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 
 }
 
 
 
 nav {
-    font-size: 2.5em;
+    font-size: 3em;
     position: fixed;
-    top: 5%;
-    left: %;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.9s  ease-in-out;
     z-index: 3;
     width: fit-content;
     scale: 95%;
@@ -79,7 +58,7 @@ nav {
 nav ul a{
     color: #141414 ;
     font-size: 80%;
-    transition: all ease 0.3s ;
+    transition: all ease 0.2s ;
     text-decoration: none;
 
 }
@@ -107,21 +86,10 @@ nav ul a:active, a:active{
     height: 62px;
   }
   
-  .navbar .nav-container li {
-    list-style: none;
-  }
-  
-  .navbar .nav-container a {
-    text-decoration: none;
-    color: #9c528b;
-    font-weight: 500;
-    font-size: xx-large;
-    padding: 0.7rem;
-  }
-  
+
   .navbar .nav-container a:hover{
       font-weight: bolder;
-         color: #71e009;
+           color: #ffae00;
   }
   
   .nav-container {
@@ -130,17 +98,6 @@ nav ul a:active, a:active{
     height: 6rem;
   }
   
-  .nav-container .checkbox {
-    position: absolute;
-    display: block;
-    height: 32px;
-    width: 32px;
-    top: 20px;
-    left: 20px;
-    z-index: 5;
-    opacity: 0;
-    cursor: pointer;
-  }
 /* content */
 
 .container img{
@@ -149,7 +106,6 @@ nav ul a:active, a:active{
     
     max-width: 100%;
     object-fit: contain;
-    box-shadow: #4d270aa1 0 0 5px;
 
     /* border: 1px dashed #F55536; */
     
@@ -163,8 +119,8 @@ img.no-boxShadow, #websitebutton{
 
 .right{
   position: fixed; 
-  right: -90px; 
-  top: 50%;      
+  right: -100px; 
+  top: 40em; 
   transform: translateY(-50%); 
   z-index: 2; 
 }
@@ -193,7 +149,7 @@ img.no-boxShadow, #websitebutton{
         align-self: center;
         justify-content: center;
         align-items: center;
-        left: 0;
+        left: 1vh;
         max-height: 50vh;
         min-height: 330px;
         
@@ -202,7 +158,7 @@ img.no-boxShadow, #websitebutton{
 
     #webimg{
         position: fixed;
-        right: 5%;
+        right: 10%;
         bottom:0;
         
     }
@@ -235,26 +191,21 @@ img.no-boxShadow, #websitebutton{
         overflow-y: hidden;
     } 
     nav#homepage ul li{
-      margin: 0.75rem;
-      padding: 0.5rem;
+      margin: 0.7rem;
+      padding: 0.4rem;
       width: fit-content;
-      border: rgb(255, 254, 243) dashed;
       background-color: rgb(255, 254, 243);
       border-radius: 1rem;
-
-      box-shadow: #ac739949 0 0 5px;
     }
     header{
       font-size: 110%;
-        margin: 0;
+        margin: 1%;
         width: 100%;
         
 
 
     }
     .title{
-        margin-left: 10%;
-        font-size: 7rem;
     }
 
     .navbar {
@@ -280,7 +231,7 @@ img.no-boxShadow, #websitebutton{
         
           nav ul a:hover{
           font-size:100%;
-              color: #9787b3;
+                 color: #ffae00;
 }
     .container{
         position: static;
@@ -301,28 +252,13 @@ img.no-boxShadow, #websitebutton{
         row-gap: 5px;
         align-items: center;
         justify-content: center;
-        margin-bottom: 0;
+        margin-bottom: 6px;
         margin-top: 0;
-        
-    }
-        #webimg {
-        position: fixed;
-        width: auto;
-        height: 40%;
-        
-        object-fit: contain;
-        right: 0;
-        bottom: 0;
-        align-self: center;
         
         
 
     }
-      
-      }
     
-    .container h1{
-    text-align:center;
     
     
 
