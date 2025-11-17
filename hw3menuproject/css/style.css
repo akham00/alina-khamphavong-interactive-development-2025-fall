@@ -1,9 +1,10 @@
-
+  
         body {
 
             margin: 0;
             font-family: mon,'Arial Narrow Bold', sans-serif;
              text-align: left;
+             border: double 6px black;
             
         }
 
