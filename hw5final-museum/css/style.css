@@ -3,7 +3,7 @@ html {
 	display: flex;
         cursor: crosshair;
                 animation: fadeIn 2s ease-in-out forwards;
-                   background-image: radial-gradient(circle at center, yellow, rgb(23, 248, 23), rgb(0, 194, 0), rgb(12, 66, 12));
+                   background-image: radial-gradient(circle at center, yellow, rgb(23, 248, 23), rgb(16, 126, 60), rgb(12, 66, 12));
 
 }
 
@@ -19,17 +19,30 @@ html {
 
 
 
+
+
+
 .intro{
-        color: #044b24; 
+        color: #3c4b04; 
         font-size: 20px;
         display: block;
 	    position: relative;
-        font-family:  Helvetica, sans-serif;
+        font-family:Helvetica, sans-serif;
         transform: rotatex(20deg);
     	transform: rotatey(-20deg);
         padding-top: -9em;
 }
 
+#circle {
+	background-color:  rgb(255, 255, 255);
+    width: 250px;
+    height: 350px;
+    border-radius: 50%;
+	position: relative;
+	top: 20em;
+    left: -10em;
+	margin: -10px;
+}
 
 
 @font-face {
@@ -43,7 +56,6 @@ html {
 
 
 body {
-
 	position: relative;
 	margin: auto;
 	perspective: 24em;
@@ -113,7 +125,7 @@ button {
 	}
 	
 	&:hover {
-		background-color: white;
+		background-color: rgb(189, 231, 0);
 		transition: background .3s 0.1s;
 	}
 	
@@ -152,41 +164,3 @@ button {
 			calc(var(--z) * 70px)
 		);
   }
-  44% {
-		transform: translate3d(
-			calc(var(--z) * 130px), 
-			calc(var(--z) * 130px), 
-			calc(var(--z) * 130px)
-		);
-  }
-  59% {
-		transform: translate3d(
-			calc(var(--z) * 85px), 
-			calc(var(--z) * 85px), 
-			calc(var(--z) * 85px)
-		);
-  }
-  73% {
-		transform: translate3d(
-			calc(var(--z) * 110px), 
-			calc(var(--z) * 110px), 
-			calc(var(--z) * 110px)
-		);
-  }
-	88% {
-		opacity: 1;
-		transform: translate3d(
-			calc(var(--z) * 90px), 
-			calc(var(--z) * 90px), 
-			calc(var(--z) * 90px)
-		);
-  }
-  100% {
-		opacity: 1;
-		transform: translate3d(
-			calc(var(--z) * 100px), 
-			calc(var(--z) * 100px), 
-			calc(var(--z) * 100px)
-		);
-  }
-}
