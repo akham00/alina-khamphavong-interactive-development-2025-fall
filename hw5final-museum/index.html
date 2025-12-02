@@ -2,40 +2,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harmonic Collection</title>
-
-    <div id="circle"></div>
-
     <style>
+
 @import url('https://fonts.googleapis.com/css2?family=Gantari:ital,wght@0,100..900;1,100..900&display=swap');
 
     </style>
     <link rel="stylesheet" href="css/style.css">
 
-</head> 
-  <p class="intro"> when i was little,
-    <br>
 
-     i'd always see my older brother playing on the xbox 
+    <title>Harmonic Collection</title>
+<body><div class="scanlines"></div>
+<div class="sidebar">
 
-     <br> 
-     
-   and no matter how much older i became,
-   the memory still sticks to the back of my head. . . </p>
 
-<body>
 
-<main>
-  <button><span>KINGDOM HEARTS</span></button></a>
-	<button>JET SET RADIO</button>
-	<button>FABLE</button>
-  <button>FINAL FANTASY</button>
-  <button>HALO</button>
-</main>
+    <p class="intro">
+    when i was little,<br><br>
+    i'd always see my older brother<br>
+    playing on the xbox<br><br>
+    and no matter how much older i became,<br>
+    the memory still sticks to<br>
+    the back of my head. . .
+    </p>
 
-</ul>
+    <main>
+      
+        <a href="#" class="button"><span>KINGDOM HEARTS</span></a>
+          
+        <a href="#" class="button"><span>JET SET RADIO</span></a>
+
+        <a href="#" class="button"><span>FINAL FANTASY</span></a>
+
+       <a href="#" class="button"><span></span>HALO</a>
+
+<div id="modal-kh" class="modal">
+  <div class="modal-content">
+    <h2>Kingdom Hearts</h2>
+<p> <pre> I never knew what was going on, 
+ all I knew this game for was
+  the anime-styled characters fighting alongside
+   random disney characters
+ like Mickey Mouse and Goofy.
+
+I always thought the music was so beautiful,
+  <u>Utada Hikaru</u>
+    is the woman who's behind the opening. 
+     I think she's incredibly popular now in the US,
+       it wasn't the case back then 
+       until the introduction of KH, 
+       i'm glad she gets the attention she deserves. 
+
+I remember so clearly, that 'sea-salt' ice cream and
+ I wanted one SO badly. 
+ The characters would eat them 
+ from time to time, 
+ and it was really prominent
+  on the CRT TV, the glistening glow of the blue popsicle.  </p></pre>
+  </div>
+</div>
+
+<div id="modal-jsr" class="modal">
+  <div class="modal-content">
+    <h2>Jet Set Radio</h2>
+    <p><pre>It's still such a favorite game of mine,
+       I ended up playing this when I was old enough to.
+
+       I actually tried to learn skating 
+       with rollerblades when I was younger
+       because I was so inspired, but... 
+
+       I kept falling on my butt and
+       I got pretty mad about it and gave up.
+       Maybe I should pick it back up.
+
+       </pre></p>
+  </div>
+</div>
+
+<div id="modal-ff" class="modal">
+  <div class="modal-content">
+    <h2>Final Fantasy</h2>
+    <p><pre>
+        There's a character named Lightning, 
+        she's stoic, pretty, and has spiky pink hair. 
+           I remember vividly that I begged my mom 
+           to cut my hair like hers.
+
+           It didn't really work out.
+
+           it's pretty hard to translate into real life.
+
+           And I wasn't allowed to have pink hair 
+           at that age.
+      
+      Despite my attachment to that character,
+      I have idea what this game is about, 
+      
+      to be honest,
+       I still don't really know. 
+
+      I'm just kind of aware it's a fighting game?
+      The storyline seems pretty complicated. 
+      Maybe I should play this now that I'm older.</p></pre>
+  </div>
+</div>
+
+<div id="modal-halo" class="modal">
+  <div class="modal-content">
+    <h2>Halo</h2>
+    <p><pre>I remember this being 
+      one of the few games that I was able to 
+      play with my brother,
+      because it was couch-op.
+
+      I unfortunately don't think
+       I was a very helpful teammate 
+       when I was 8 years old.
+    </pre>
+    </p>
+  </div>
+</div>
+
+    </main>
+
+</div>
+
+<script>
+const modals = {
+  "KINGDOM HEARTS": "modal-kh",
+  "JET SET RADIO": "modal-jsr",
+  "FINAL FANTASY": "modal-ff",
+  "HALO": "modal-halo"
+};
+
+document.querySelectorAll(".button").forEach(btn => {
+  btn.addEventListener("click", e => {
+    e.preventDefault(); 
+    const text = btn.textContent.trim();
+    const modal = document.getElementById(modals[text]);
+    if (!modal) return;
+
+
+    modal.classList.toggle("active");
+  });
+});
+
+
+document.querySelectorAll(".modal").forEach(modal => {
+  modal.addEventListener("click", e => {
+    if (e.target === modal) modal.classList.remove("active");
+  });
+});
+</script>
+
 
 </body>
 
 
-  <script type="text/javascript" src="libs/jquery-3.6.1.min.js"></script>
+  <script type="text/javascript" src="lib/jquery-3.7.1.min.js"></script>
