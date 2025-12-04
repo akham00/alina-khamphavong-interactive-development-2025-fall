@@ -86,14 +86,7 @@
       }
 
 
-      let lastIdx = -1; let watchdog = null;
-      function startWatchdog(){ watchdog = setInterval(()=>{
-        if(lastIdx === idx){
-          console.error('Watchdog: no progress — aborting');
-          showDebug('<b>Watchdog:</b> typing stalled — rendering final text.');
-          finishImmediately(); clearInterval(watchdog);
-        } else { lastIdx = idx; }
-      }, 2000);} 
+  
 
       window.addEventListener('error', (ev)=>{
         console.error('Global error caught', ev.error || ev.message);
@@ -102,9 +95,6 @@
       });
 
 
-      if(document.readyState === 'loading'){
-        document.addEventListener('DOMContentLoaded', ()=>{ area.appendChild(cursor); running=true; step(); startWatchdog(); });
-      } else { area.appendChild(cursor); running=true; step(); startWatchdog(); }
 
 
       window.__haloTypeDebug = { finishImmediately, showDebug, hideDebug };
