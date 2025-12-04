@@ -1,10 +1,81 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-    </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>JET SET RADIO</title>
     <link rel="stylesheet" href="css/style.css">
 
-    <title>JET SET RADIO</title>
-      <body>
+</head>
+<body>
+<div class="container">
+  <h2 class="line">FUNKY BEATS AND SKATES</h2></a>
+  <p class="line">It's still such a favorite game of mine, I ended up playing this when I was old enough to. It's a game about skating and doing graffiti, and robots and aliens-it's pretty chaotic. </p>
+  <p class="line">I actually tried to learn skating with rollerblades when I was younger because I was so inspired, but...</p>
+  <p class="line">I kept falling on my butt and I got pretty mad about it and gave up. Maybe I should pick it back up.</p>
+</div>
+
+<script>
+  const lines = document.querySelectorAll('.line');
+  lines.forEach((line, i) => {
+    const delay = Math.random() * 0.5 + i * 0.4;
+    line.style.animationDelay = delay + 's';
+    line.style.fontSize = (Math.random() * 1.5 + 1.2) + 'rem';
+  });
+
+ 
+  setInterval(() => {
+    document.body.classList.toggle('shake');
+  }, 700);
+
+
+  window.addEventListener('mousemove', e => {
+    const dot = document.createElement('div');
+    dot.className = 'trail-dot';
+    dot.style.left = e.pageX + 'px';
+    dot.style.top = e.pageY + 'px';
+    document.body.appendChild(dot);
+    setTimeout(() => dot.remove(), 600);
+  });
+
+
+  window.addEventListener('click', e => {
+    const dot = document.createElement('div');
+    dot.className = 'spray-dot';
+    dot.style.left = e.pageX + 'px';
+    dot.style.top = e.pageY + 'px';
+    document.body.appendChild(dot);
+    setTimeout(() => dot.remove(), 1200);
+  });
+</script>
+
+<div class="vertical-overlay">
+Understand, understand
+Understand, understand
+Understand, understand the concept of love
+Uh!
+Understand, understand
+Understand, understand
+Understand, understand the concept of love
+Uh!
+Understand, understand
+Understand, understand
+Understand, understand the concept, the concept of love
+Ready to kick some, ready to kick some
+Uh! Uh!
+What is love? What is free love?
+What is love? Love is free, free
+Understand, understand the concept of love, uh!
+Understand, understand the concept of love, uh!
+Understand, understand, uh!
+Understand, understand, uh!
+Understand, understand, the concept, the concept of love!
+Uh!
+The concept of love!
+
+  
+</div>
+
+</body>
+</html>
+

@@ -1,33 +1,64 @@
-html {
-    margin: 4rem;
-    padding: 0;
-    box-sizing: border-box;
-	        cursor: crosshair;
-                animation: fadeIn 2s ease-in-out forwards;
+ body {
+        margin: 0;
+        background: radial-gradient(circle at center,
+                    #ffffff 0%, #f3eaca 45%,  #7cc0ff 100%);
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        height: 100vh;
+        overflow: hidden;
+    }
 
-}
+    .star {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: rgb(248, 251, 255);
+        opacity: 0.8;
+        border-radius: 50%;
+        animation: floatUp linear infinite;
+    }
 
-        @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-    
-}
-}
-body {
-    background:  radial-gradient(
-      circle at 50% 30%,
-      #d4ffff 0%,
-      #a5e5ff 35%,
-      #00ccff 60%,
-      #ffb404 85%,
-      #00bfff 100%
-    );
-  background-attachment: fixed;
-  color: #fff;
-    font-family:monospace;
-    color: #00ff3c;
-    overflow: hidden;
-}
+    @keyframes floatUp {
+        from { transform: translateY(100vh); opacity: 0; }
+        to   { transform: translateY(-10vh); opacity: 1; }
+    }
+
+    .content {
+        color: #7cc0ff;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 700px;
+        padding: 30px;
+        text-align: center;
+        animation: fadeIn 2s ease;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translate(-50%, -45%); }
+        to   { opacity: 1; transform: translate(-50%, -50%); }
+    }
+
+    h2 {
+        font-size: 45px;
+        margin-bottom: 20px;
+        letter-spacing: 1.5px;
+        text-shadow: 0 0 10px rgba(236, 242, 255, 0.7),
+                     0 0 25px rgba(120, 160, 255, 0.9);
+    }
+
+    p {
+        font-size: 20px;
+        line-height: 1.6;
+        white-space: pre-line;
+        color: #1566c4;
+        text-shadow: 0 0 6px rgba(150, 180, 255, 0.4);
+    }
+
+    .shimmer {
+        position: absolute;
+        inset: 0;
+        animation: shimmerMove 5s infinite linear;
+        pointer-events: none;
+    }
+

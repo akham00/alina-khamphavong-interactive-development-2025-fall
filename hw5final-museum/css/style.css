@@ -32,11 +32,49 @@ body {
     overflow: hidden;
 }
 
+
 .intro {
   font-size: 30px;
-  color:#021e0f;
+  color:#ffffff; 
   font-family:monospace;
+  transform: translate(-2px, -2px);
 }
+
+ :root{
+    --bg: #061212;
+    --glow: #3ee05e;
+  }
+
+  .sphere-stage {
+    width:600px;
+    height:600px;
+    position:relative;
+    user-select:none;
+    touch-action:none;
+  }
+
+
+  .sphere-viewport {
+    position:absolute;
+    inset:0;
+    overflow:hidden;
+    perspective:1400px;
+  }
+
+  .point {
+    position:absolute;
+    left:0;
+    top:0;
+    transform-origin:center center;
+    will-change: transform, opacity;
+    pointer-events:none;
+    white-space: pre;
+    color:#a4ffa4;
+    text-shadow: 0 0 8px rgba(50,255,80,0.18), 0 0 22px rgba(0,0,0,0.7);
+    font-weight:600;
+  }
+    
+
 
 .menu {
     display: flex;
@@ -53,7 +91,7 @@ body {
     display: block;
     width: 240px;
     padding: 18px;
-    background: linear-gradient(#119927, #284b17);
+    background: linear-gradient(#09c509, #002200);
     border: 2px solid #00ff3c;
     border-radius: 30px;
     text-decoration: none;
@@ -174,4 +212,3 @@ body {
     }
 
     
-
