@@ -1,17 +1,24 @@
-
-    body {
-        background:  #5f239b;
+ body {
+        background: radial-gradient(circle at center, rgb(122, 15, 221), rgb(42, 7, 75));
         font-family: monospace;
         padding: 40px;
         text-align: center;
         line-height: 1.2;
+        color: #f0e6ff;
     }
 
     h1 {
         font-size: 24px;
         margin-bottom: 40px;
         letter-spacing: 1px;
+        animation: glow 2s ease-in-out infinite alternate;
     }
+
+    @keyframes glow {
+        from { text-shadow: 0 0 6px #d197ff, 0 0 14px #ffb3f9; }
+        to   { text-shadow: 0 0 12px #e7b3ff, 0 0 22px #ffaaff; }
+    }
+
 
     .diamond {
         white-space: pre;
@@ -19,8 +26,36 @@
         cursor: pointer;
         transition: opacity 0.6s ease, transform 0.6s ease;
         font-size: 14px;
+        text-shadow: 0 0 8px #e3c1ff;
     }
 
+ 
+    .diamond .spark {
+        color: #ffffff;
+        animation: lightningPulse 1.3s infinite ease-in-out;
+        text-shadow: 0 0 10px #93d3ff, 0 0 20px #b6e4ff;
+        font-weight: bold;
+    }
+
+    @keyframes lightningPulse {
+        0% { text-shadow: 0 0 8px #93d3ff; }
+        50% { text-shadow: 0 0 22px #d7f1ff; }
+        100% { text-shadow: 0 0 10px #93d3ff; }
+    }
+
+  
+    .diamond.shake {
+        animation: shake 0.4s ease-in-out 2;
+    }
+
+    @keyframes shake {
+        0% { transform: translateX(0); }
+        20% { transform: translateX(-3px); }
+        40% { transform: translateX(3px); }
+        60% { transform: translateX(-3px); }
+        80% { transform: translateX(3px); }
+        100% { transform: translateX(0); }
+    }
 
     .shatter {
         opacity: 0;
@@ -41,3 +76,62 @@
     #revealText.show {
         opacity: 1;
     }
+  @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Courgette&display=swap');
+
+  body {
+    font-family: 'Courgette', cursive;
+  }
+
+  .lightningFX {
+    position: relative;
+    display: inline-block;
+    font-family: 'Great Vibes', cursive;
+    font-size: 28px;
+    color: #ffccff;
+    text-shadow: 0 0 12px #ff66ff, 0 0 25px #a400ff;
+    animation: glowPulse 1.6s ease-in-out infinite, shake 0.25s infinite;
+  }
+
+  @keyframes glowPulse {
+    0% { text-shadow: 0 0 10px #ff99ff, 0 0 25px #d400ff; }
+    50% { text-shadow: 0 0 25px #ff66ff, 0 0 45px #ff00ff; }
+    100% { text-shadow: 0 0 10px #ff99ff, 0 0 25px #d400ff; }
+  }
+
+  @keyframes shake {
+    0% { transform: translate(0px, 0px); }
+    25% { transform: translate(1px, -2px); }
+    50% { transform: translate(-1px, 2px); }
+    75% { transform: translate(2px, 1px); }
+    100% { transform: translate(0px, 0px); }
+  }
+
+
+  .lightningFX::before,
+  .lightningFX::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 12px white;
+    animation: spark 0.8s infinite linear;
+  }
+
+  .lightningFX::after {
+    animation-delay: 0.4s;
+  }
+
+  @keyframes spark {
+    0% { transform: translate(0,0) scale(1); opacity: 1; }
+    50% { transform: translate(20px,-25px) scale(0.4); opacity: 0.8; }
+    100% { transform: translate(-15px,20px) scale(0); opacity: 0; }
+  }
+
+
+  .lightningFX::selection {
+    background: rgba(255, 0, 255, 0.4);
+  }

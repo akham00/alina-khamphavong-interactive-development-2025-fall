@@ -6,14 +6,13 @@
     <link rel="stylesheet" href="css/style.css">
 <title>Final Fantasy</title>
 
-</head>
 
 <body>
 
 <h1>stylish characters fighting...</h1>
 
 <pre id="diamond" class="diamond">
-           Lightning.
+           <span class="spark"><span class="lightningFX">Lightning.</span></span>
       It flashes bright,
     then fades away. It
  can't protect; it only
@@ -21,7 +20,7 @@
 </pre>
 
 <div id="revealText">
-There's a character named Lightning… she’s stoic, pretty, and has spiky pink hair. 
+There's a character named Lightning… she’s stoic, pretty, and has spiky pink hair.
 I remember vividly that I begged my mom to cut my hair like hers.
 
 It didn’t really work out. It’s pretty hard to translate into real life aaand I wasn’t allowed to have pink hair at that age.
@@ -41,9 +40,11 @@ I’m vaguely aware it’s a fighting game? The storyline seems very complicated
         if (clicked) return;
         clicked = true;
 
+        diamond.classList.add("shake");
 
-        diamond.classList.add("shatter");
-
+        setTimeout(() => {
+            diamond.classList.add("shatter");
+        }, 400);
 
         setTimeout(() => {
             revealText.classList.add("show");
@@ -53,5 +54,3 @@ I’m vaguely aware it’s a fighting game? The storyline seems very complicated
 
 </body>
 </html>
-
-

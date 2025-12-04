@@ -3,57 +3,115 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title> Halo Ring Typewriter </title> <link rel="stylesheet" href="css/style.css">
+  <title>HALO</title>    <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@300;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
- 
 
+</head>
 <body>
-
   <div class="dust"></div>
-
   <div class="content">
     <h1>Shooting Colorful Aliens</h1>
-    <div id="typeArea" class="typewrap"></div>
+    <div id="typeArea" class="typewrap" aria-live="polite"></div>
   </div>
 
+  <div id="dbg" class="debug-overlay" aria-hidden="true" style="display:none"></div>
+
   <script>
-    const TEXT = `I remember this being
-      one of the few games that I was able to
-      play with my brother,
-      because it was couch-op.
+    (function(){
 
-      I unfortunately don't think
-       I was a very helpful teammate
-       when I was 8 years old.`;
+      const RAW = `I remember this being\n      one of the few games that I was able to\n      play with my brother,\n      because it was couch-op.\n\n      I unfortunately don't think\n       I was a very helpful teammate\n       when I was 8 years old. I just wanted to talk and pet the big blue aliens (covenants).`;
 
-    const area = document.getElementById('typeArea');
-    let i = 0;
+      const TEXT = RAW.replace(/\r/g,''); // normalize
+      const area = document.getElementById('typeArea');
+      const dbg = document.getElementById('dbg');
 
-    const cursor = document.createElement('span');
-    cursor.className = 'cursor';
-    area.appendChild(cursor);
-
-    function type(){
-      if(i >= TEXT.length){ cursor.remove(); return; }
-      const c = TEXT[i];
-
-      cursor.remove();
-
-      if(c === '
-            '){
-        area.appendChild(document.createElement('br'));
-      } else if(c === ' '){
-        area.appendChild(document.createTextNode(' '));
-      } else {
-        area.appendChild(document.createTextNode(c));
+      function showDebug(msg){
+        dbg.style.display='block'; dbg.setAttribute('aria-hidden','false'); dbg.innerHTML = msg;
+        console.warn('Typewriter debug:', msg);
       }
 
-      area.appendChild(cursor);
-      i++;
-      setTimeout(type, 28);
-    }
+      function hideDebug(){ dbg.style.display='none'; dbg.setAttribute('aria-hidden','true'); }
 
-    type();
+      let idx = 0;
+      let running = false;
+
+      const cursor = document.createElement('span'); cursor.className='cursor';
+
+      function safeAppendNode(node){ try{ area.appendChild(node); } catch(e){ console.error('append error', e); }
+      }
+
+      function finishImmediately(){
+
+        try{
+          const lines = TEXT.split('\n');
+          area.textContent = '';
+          lines.forEach((ln,i)=>{
+
+            const leading = ln.match(/^\s*/)[0] || '';
+            if(leading) area.appendChild(document.createTextNode(leading.replace(/ /g,'\u00A0')));
+            area.appendChild(document.createTextNode(ln.trimStart()));
+            if(i < lines.length-1) area.appendChild(document.createElement('br'));
+          });
+        }catch(e){ console.error('final render failed', e); }
+        cursor.remove();
+      }
+
+      function step(){
+        if(idx >= TEXT.length){ cursor.remove(); running=false; return; }
+        const ch = TEXT[idx];
+
+        cursor.remove();
+
+        try{
+          if(ch === '\n'){
+            safeAppendNode(document.createElement('br'));
+          } else if(ch === ' '){
+            safeAppendNode(document.createTextNode('\u00A0'));
+          } else {
+            safeAppendNode(document.createTextNode(ch));
+          }
+        } catch(err){
+          showDebug('<b>Error:</b> ' + (err && err.message ? err.message : String(err)) + ' — falling back to final text.');
+          console.error(err);
+          finishImmediately();
+          return;
+        }
+
+
+        safeAppendNode(cursor);
+        idx++;
+
+        const delay = 18 + Math.round(Math.random()*22);
+        setTimeout(step, delay);
+      }
+
+
+      let lastIdx = -1; let watchdog = null;
+      function startWatchdog(){ watchdog = setInterval(()=>{
+        if(lastIdx === idx){
+          console.error('Watchdog: no progress — aborting');
+          showDebug('<b>Watchdog:</b> typing stalled — rendering final text.');
+          finishImmediately(); clearInterval(watchdog);
+        } else { lastIdx = idx; }
+      }, 2000);} 
+
+      window.addEventListener('error', (ev)=>{
+        console.error('Global error caught', ev.error || ev.message);
+        showDebug('<b>Global error:</b> ' + (ev.error && ev.error.message ? ev.error.message : ev.message) + ' — rendering final text.');
+        finishImmediately();
+      });
+
+
+      if(document.readyState === 'loading'){
+        document.addEventListener('DOMContentLoaded', ()=>{ area.appendChild(cursor); running=true; step(); startWatchdog(); });
+      } else { area.appendChild(cursor); running=true; step(); startWatchdog(); }
+
+
+      window.__haloTypeDebug = { finishImmediately, showDebug, hideDebug };
+
+    })();
   </script>
+
+  
 </body>
 </html>
