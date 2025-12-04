@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title> Halo Ring Typewriter </title> <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@300;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+ 
+
+<body>
+
+  <div class="dust"></div>
+
+  <div class="content">
+    <h1>Shooting Colorful Aliens</h1>
+    <div id="typeArea" class="typewrap"></div>
+  </div>
+
+  <script>
+    const TEXT = `I remember this being
+      one of the few games that I was able to
+      play with my brother,
+      because it was couch-op.
+
+      I unfortunately don't think
+       I was a very helpful teammate
+       when I was 8 years old.`;
+
+    const area = document.getElementById('typeArea');
+    let i = 0;
+
+    const cursor = document.createElement('span');
+    cursor.className = 'cursor';
+    area.appendChild(cursor);
+
+    function type(){
+      if(i >= TEXT.length){ cursor.remove(); return; }
+      const c = TEXT[i];
+
+      cursor.remove();
+
+      if(c === '
+            '){
+        area.appendChild(document.createElement('br'));
+      } else if(c === ' '){
+        area.appendChild(document.createTextNode(' '));
+      } else {
+        area.appendChild(document.createTextNode(c));
+      }
+
+      area.appendChild(cursor);
+      i++;
+      setTimeout(type, 28);
+    }
+
+    type();
+  </script>
+</body>
+</html>
