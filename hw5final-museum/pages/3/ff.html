@@ -1,97 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css">
-<title>FINAL FANTASY</title> 
+<title>Final Fantasy</title>
 
 </head>
+
 <body>
 
-<div class="container">
-  <h1> Stylish Characters Fighting. . .</h1>
-  <div class="text-block" id="story">
-<p id="story">
-  <span class="story-line">Stylish Characters Fighting</span><br>
-  <span class="story-line">There’s a character named Lightning…</span>
+<h1>stylish characters fighting...</h1>
 
+<pre id="diamond" class="diamond">
+           Lightning.
+      It flashes bright,
+    then fades away. It
+ can't protect; it only
+        destroys.
+</pre>
 
-she’s stoic, pretty, and has spiky pink hair. I remember vividly that I begged my mom to cut my hair like hers.</p>
-    <p>It didn’t really work out. It’s pretty hard to translate into real life. And I wasn’t allowed to have pink hair at that age.</p>
-    <p>Despite my attachment to her, I honestly have no idea what this game is actually about. Even now I’m kind of clueless.</p>
-    <p>I’m vaguely aware it’s a fighting game? The storyline seems very complicated, but I always thought the overall style was beautiful. </p>
-  </div>
+<div id="revealText">
+There's a character named Lightning… she’s stoic, pretty, and has spiky pink hair. 
+I remember vividly that I begged my mom to cut my hair like hers.
+
+It didn’t really work out. It’s pretty hard to translate into real life aaand I wasn’t allowed to have pink hair at that age.
+
+Despite my attachment to her, I honestly have no idea what this game is actually about. Even now I’m kind of clueless.
+
+I’m vaguely aware it’s a fighting game? The storyline seems very complicated, but I always thought the overall style was beautiful.
 </div>
 
-<div class="flash" id="flash"></div>
-
 <script>
+    const diamond = document.getElementById("diamond");
+    const revealText = document.getElementById("revealText");
 
-window.addEventListener('load', () => {
-  const flash = document.getElementById('flash');
-  flash.classList.add('active');
-  setTimeout(() => flash.classList.remove('active'), 220);
+    let clicked = false;
 
-
-  for (let i = 0; i < 12; i++) {
-    spawnSpark();
-  }
-});
+    diamond.addEventListener("click", () => {
+        if (clicked) return;
+        clicked = true;
 
 
-function spawnSpark() {
-  const s = document.createElement('div');
-  s.className = 'spark';
-  s.textContent = '✦';
-  s.style.left = (Math.random()*100) + 'vw';
-  s.style.top = (Math.random()*100) + 'vh';
-  document.body.appendChild(s);
+        diamond.classList.add("shatter");
 
 
-  requestAnimationFrame(() => {
-    s.style.transition = 'opacity 1.4s ease-out, transform 1.4s ease-out';
-    s.style.opacity = 1;
-    s.style.transform = 'scale(1.6)';
-  });
-
-  setTimeout(() => {
-    s.style.opacity = 0;
-    s.style.transform = 'scale(0.3)';
-    setTimeout(() => s.remove(), 1600);
-  }, Math.random()*800 + 200);
-}
-
-
-setInterval(() => {
-  spawnSpark();
-  const flash = document.getElementById('flash');
-  flash.classList.add('active');
-  setTimeout(() => flash.classList.remove('active'), 160);
-}, 4200);
-
-
-const emphasisMap = {
-  "Lightning": "word-glow",
-  "pink": "word-glow",
-  "fight": "word-slash",
-  "fighting": "word-slash",
-  "complicated": "word-spark",
-  "play": "word-glow"
-};
-
-
-const story = document.getElementById("story");
-let html = story.innerHTML;
-
-for (const [word, cls] of Object.entries(emphasisMap)) {
-  const regex = new RegExp(`\\b${word}\\b`, "gi");
-  html = html.replace(regex, `<span class="${cls}">${word}</span>`);
-}
-
-story.innerHTML = html;
-
+        setTimeout(() => {
+            revealText.classList.add("show");
+        }, 650);
+    });
 </script>
 
 </body>
 </html>
+
+
