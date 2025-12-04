@@ -1,20 +1,14 @@
 <!DOCTYPE html>
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-
-@import url('https://fonts.googleapis.com/css2?family=Gantari:ital,wght@0,100..900;1,100..900&display=swap');
-
     </style>
     <link rel="stylesheet" href="css/style.css">
 
-
     <title>Harmonic Collection</title>
-<body><div class="scanlines"></div>
-<div class="sidebar">
-
-
+      <body>
+        <div class="sidebar">
 
     <p class="intro">
     when i was little,<br><br>
@@ -26,18 +20,16 @@
     </p>
 
     <main>
-      
-        <a href="#" class="button"><span>KINGDOM HEARTS</span></a>
+        <a href="./pages/1/KH.html" class="button"><span>KINGDOM HEARTS</span></a>
           
-        <a href="#" class="button"><span>JET SET RADIO</span></a>
+        <a href="./pages/2/JSR.html" class="button2"><span>JET SET RADIO</span></a>
 
-        <a href="#" class="button"><span>FINAL FANTASY</span></a>
+        <a href="./pages/3/ff.html" class="button3"><span>FINAL FANTASY</span></a>
 
-       <a href="#" class="button"><span></span>HALO</a>
+       <a href="./pages/4/h.html" class="button4"><span>HALO</span></a>
 
-<div id="modal-kh" class="modal">
-  <div class="modal-content">
-    <h2>Tasty-Looking Ice Cream</h2>
+<div class="module1">
+<h2>Tasty-Looking Ice Cream</h2>
 <p> <br> I never knew what was going on, 
  all I knew this game for was
   the anime-styled characters fighting alongside
@@ -59,109 +51,8 @@
  from time to time, 
  and it was really prominent
   on the CRT TV, the glistening glow of the blue popsicle. </br> </p>
+
   </div>
-</div>
+</div> <script type="text/javascript" src="lib/jquery-3.7.1.min.js"></script>
 
-<div id="modal-jsr" class="modal">
-  <div class="modal-content">
-    <h2>Funky Beats and Skates</h2>
-    <p><br>It's still such a favorite game of mine,
-       I ended up playing this when I was old enough to.</br>
-
-       <br>I actually tried to learn skating 
-       with rollerblades when I was younger
-       because I was so inspired, but... </br>
-
-       <br>I kept falling on my butt and
-       I got pretty mad about it and gave up.
-       Maybe I should pick it back up.</br>
-
-       </pre></p>
-  </div>
-</div>
-
-<div id="modal-ff" class="modal">
-  <div class="modal-content">
-    <h2>Stylish Characters Fighting</h2>
-    <p>
-       <br> There's a character named Lightning, 
-        she's stoic, pretty, and has spiky pink hair. 
-           I remember vividly that I begged my mom 
-           to cut my hair like hers.</br>
-
-           <br> It didn't really work out.
-
-           it's pretty hard to translate into real life.
-            </br>
-
-          <br>  And I wasn't allowed to have pink hair 
-           at that age.
-          </br>
-      
-        <br>  Despite my attachment to that character,
-      I have idea what this game is about, 
-      
-      to be honest,
-       I still don't really know. 
-
-      I'm just kind of aware it's a fighting game?
-      The storyline seems pretty complicated. 
-      Maybe I should play this now that I'm older. </br>
-    
-    </p>
-  </div>
-</div>
-
-<div id="modal-halo" class="modal">
-  <div class="modal-content">
-    <h2>Shooting Colorful Aliens </h2>
-    <p>I remember this being 
-      one of the few games that I was able to 
-      play with my brother,
-      because it was couch-op.
-
-      I unfortunately don't think
-       I was a very helpful teammate 
-       when I was 8 years old.
-    
-    </p>
-  </div>
-</div>
-
-    </main>
-
-</div>
-
-<script>
-const modals = {
-  "KINGDOM HEARTS": "modal-kh",
-  "JET SET RADIO": "modal-jsr",
-  "FINAL FANTASY": "modal-ff",
-  "HALO": "modal-halo"
-};
-
-document.querySelectorAll(".button").forEach(btn => {
-  btn.addEventListener("click", e => {
-    e.preventDefault(); 
-    const text = btn.textContent.trim();
-    const modal = document.getElementById(modals[text]);
-    if (!modal) return;
-
-
-    modal.classList.toggle("active");
-  });
-});
-
-
-document.querySelectorAll(".modal").forEach(modal => {
-  modal.addEventListener("click", e => {
-    if (e.target === modal) modal.classList.remove("active");
-  });
-});
-</script>
-
-
-</body>
-
-
-  <script type="text/javascript" src="lib/jquery-3.7.1.min.js"></script>
+  

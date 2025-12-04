@@ -1,0 +1,34 @@
+html {
+    margin: 4rem;
+    padding: 0;
+    box-sizing: border-box;
+	        cursor: crosshair;
+                animation: fadeIn 2s ease-in-out forwards;
+
+}
+
+        @keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    
+}
+}
+body {
+    background:  radial-gradient(
+      circle at 50% 30%,
+      #00ff99 20%,
+     #00ff99 40%,
+     #00ff99 10%,
+      #ffb404 85%,
+      #54ff20 100%
+    );
+  background-attachment: fixed;
+  color: #00ffa6;
+    font-family:monospace;
+    color: #00ff3c;
+    overflow: hidden;
+}
+
